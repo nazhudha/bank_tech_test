@@ -3,7 +3,7 @@ class Account {
     this.balance = 0;
     this.transactions = [];
   }
-
+  
   deposit(amount) {
     this.balance += amount;
     this.transactions.push({
