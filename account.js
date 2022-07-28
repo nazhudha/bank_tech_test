@@ -5,11 +5,23 @@ class Account {
   }
 
   deposit(amount) {
-    this.balance += amount
+    this.balance += amount;
+    this.transactions.push({
+      date: new Date(Date.now()),
+      credit: amount,
+      debit: null,
+      balance: this.balance,
+    });
   }
 
   withdraw(amount) {
-    this.balance -= amount
+    this.balance -= amount,
+    this.transactions.push({
+      date: new Date(Date.now()),
+      credit: null,
+      debit: amount,
+      balance: this.balance,
+    });
   }
 
   showTranscations() {
