@@ -35,10 +35,15 @@ Program can be run within NODE REPL.
 ```
 node 
 const BankAcc = require('./account.js');
+const Statement = require("./statement");
+
 const account = new BankAcc();
+let statement = new Statement(account.showTranscations());
 const date = new Date(Date.now());
+
 account.deposit(500);
 account.withdraw(100);
 account.withdraw(200);
 console.log(account.showTranscations())
+console.log(statement.printStatement())
 ```
