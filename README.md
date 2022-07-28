@@ -39,5 +39,6 @@ const account = new BankAcc();
 const date = new Date(Date.now());
 account.deposit(500);
 account.withdraw(100);
+account.withdraw(200);
 console.log(account.showTranscations())
 ```
