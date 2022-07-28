@@ -5,11 +5,11 @@ class Account {
   }
 
   deposit(amount) {
-    this.balance -= amount
+    this.balance += amount
   }
 
   withdraw(amount) {
-    this.balance += amount
+    this.balance -= amount
   }
 
   showTranscations() {
