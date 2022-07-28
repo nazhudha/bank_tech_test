@@ -58,4 +58,4 @@ Run tests
 jest
 ```
 ### Screenshot
-![terminal Screenshot](./assets/terminal_screensho.pngg)
+![terminal Screenshot](./assets/terminal_screensho.png)
