@@ -1,6 +1,7 @@
 const Account = require("../account");
 
 let account = new Account();
+const date = new Date(Date.now());
 
 describe("Account Class", () => {
   it("creates new empty bank Account with 0 balance", () => {
@@ -12,4 +13,14 @@ describe("Account Class", () => {
     account.withdraw(100);
     expect(account.showBalance()).toBe(400);
   });
+
+  it("Show list of transcations if: Desposit 500, withdraw 100 and withdraw 200", () => {
+    account.withdraw(200);
+    expect(account.showTranscations()).toEqual([
+      {"date": date, "credit": 500, "debit": null, "balance": 500}, 
+      {"date": date, "credit": null, "debit": 100, "balance": 400}, 
+      {"date": date, "credit": null, "debit": 200, "balance": 200}, 
+    ]);
+  });
+
 });
