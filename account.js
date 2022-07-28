@@ -7,7 +7,7 @@ class Account {
   deposit(amount) {
     this.balance += amount;
     this.transactions.push({
-      date: new Date(Date.now()),
+      date: new Date().toLocaleDateString(),
       credit: amount,
       debit: null,
       balance: this.balance,
@@ -17,7 +17,7 @@ class Account {
   withdraw(amount) {
     this.balance -= amount,
     this.transactions.push({
-      date: new Date(Date.now()),
+      date: new Date().toLocaleDateString(),
       credit: null,
       debit: amount,
       balance: this.balance,

@@ -1,7 +1,7 @@
 const Account = require("../account");
 
 let account = new Account();
-const date = new Date(Date.now());
+const date = new Date().toLocaleDateString();
 
 describe("Account Class", () => {
   it("creates new empty bank Account with 0 balance", () => {
