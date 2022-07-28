@@ -17,10 +17,9 @@ describe("Account Class", () => {
   it("Show list of transcations if: Desposit 500, withdraw 100 and withdraw 200", () => {
     account.withdraw(200);
     expect(account.showTranscations()).toEqual([
-      {"date": date, "credit": 500, "debit": null, "balance": 500}, 
-      {"date": date, "credit": null, "debit": 100, "balance": 400}, 
-      {"date": date, "credit": null, "debit": 200, "balance": 200}, 
+      { date: date, credit: 500, debit: null, balance: 500 },
+      { date: date, credit: null, debit: 100, balance: 400 },
+      { date: date, credit: null, debit: 200, balance: 200 },
     ]);
   });
-
 });

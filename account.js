@@ -15,13 +15,13 @@ class Account {
   }
 
   withdraw(amount) {
-    this.balance -= amount,
-    this.transactions.push({
-      date: new Date().toLocaleDateString(),
-      credit: null,
-      debit: amount,
-      balance: this.balance,
-    });
+    (this.balance -= amount),
+      this.transactions.push({
+        date: new Date().toLocaleDateString(),
+        credit: null,
+        debit: amount,
+        balance: this.balance,
+      });
   }
 
   showTranscations() {
@@ -31,7 +31,6 @@ class Account {
   showBalance() {
     return this.balance;
   }
-
 }
 
 module.exports = Account;
