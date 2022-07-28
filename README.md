@@ -24,9 +24,14 @@ date || credit || debit || balance
 ```
 
 ## Undertaking
-How I made the program
+A node.js bank account app which runs in the terminal, can do the following:
+- make a deposit
+- make a withdrawal
+- printe a bank statement
 
 ### Technologies Used
+- Node - backend
+- Jest - unit and integration testing
 
 ### How to Run the App
 
@@ -46,4 +51,10 @@ account.withdraw(100);
 account.withdraw(200);
 console.log(account.showTranscations())
 console.log(statement.printStatement())
+```
+
+Run tests
+
+```
+jest
 ```
